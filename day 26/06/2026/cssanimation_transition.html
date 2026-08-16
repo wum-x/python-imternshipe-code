@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation</title>
+
+    <style>
+        /* Page styling */
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Animated box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* Apply animation */
+            animation: moveBox 3s infinite alternate;
+        }
+
+        /* Define the animation */
+        @keyframes moveBox {
+
+            /* Starting position */
+            0% {
+                transform: translateX(-200px);
+                background-color: red;
+            }
+
+            /* Middle position */
+            50% {
+                transform: translateX(0);
+                background-color: blue;
+            }
+
+            /* Ending position */
+            100% {
+                transform: translateX(200px);
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated box -->
+    <div class="box"></div>
+
+</body>
+</html>
